@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_home"
+        android:fontFamily="@font/noto_sans_regular"
+        android:icon="@drawable/bottom_nav_home"
+        android:includeFontPadding="false"
+        android:title="@string/nav_home"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_write"
+        android:fontFamily="@font/noto_sans_regular"
+        android:icon="@drawable/bottom_nav_post"
+        android:includeFontPadding="false"
+        android:title="@string/nav_write"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_chat"
+        android:fontFamily="@font/noto_sans_regular"
+        android:icon="@drawable/bottom_nav_chat"
+        android:includeFontPadding="false"
+        android:title="@string/nav_chat"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_setting"
+        android:fontFamily="@font/noto_sans_regular"
+        android:icon="@drawable/bottom_nav_settings"
+        android:includeFontPadding="false"
+        android:title="@string/nav_setting"
+        app:showAsAction="ifRoom" />
+</menu>

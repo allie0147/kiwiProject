@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sign_up_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:padding="@dimen/large"
+    android:scrollbars="none"
+    tools:context=".ui.activity.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/signup_profile"
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/edittext_light"
+            android:padding="50dp"
+            android:src="@drawable/round_add_to_photos_24" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_layout_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/signup_editText_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:inputType="textEmailAddress"
+                android:padding="@dimen/small"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View style="@style/divider" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_layout_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_medium"
+            android:hint="비밀번호"
+            android:includeFontPadding="false"
+            app:counterEnabled="true"
+            app:counterMaxLength="20"
+            app:counterTextAppearance="@integer/fui_min_password_length"
+            app:counterTextColor="@color/green"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/signup_editText_pwd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:inputType="textPassword"
+                android:maxEms="20"
+                android:maxLength="20"
+                android:minEms="8"
+                android:minLines="8"
+                android:padding="@dimen/small"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View style="@style/divider" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/signup_layout_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_medium"
+            android:hint="닉네임"
+            android:includeFontPadding="false"
+            app:counterEnabled="true"
+            app:counterMaxLength="11"
+            app:counterTextAppearance="@integer/fui_min_password_length"
+            app:counterTextColor="@color/green"
+            app:errorEnabled="true"
+            app:errorTextColor="@color/red"
+            app:hintAnimationEnabled="true"
+            app:hintEnabled="true">
+
+            <EditText
+                android:id="@+id/signup_editText_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:maxEms="11"
+                android:maxLength="11"
+                android:minEms="2"
+                android:minLines="2"
+                android:padding="@dimen/small"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View style="@style/divider" />
+
+        <Button
+            android:id="@+id/sign_up_finish"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large"
+            android:background="@drawable/button_green"
+            android:fontFamily="@font/noto_sans_medium"
+            android:includeFontPadding="false"
+            android:padding="@dimen/small"
+            android:text="회원가입"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/sfont" />
+    </LinearLayout>
+</ScrollView>

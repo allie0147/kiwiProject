@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/maps_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/medium"
+        android:fontFamily="@font/noto_sans_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/large"
+        android:text="우리 동네 찾기"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <View
+        style="@style/divider"
+        android:layout_marginBottom="@dimen/medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/large"
+        android:paddingRight="@dimen/large">
+
+        <EditText
+            android:id="@+id/maps_search_address"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:autofillHints="address"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:hint="도로명 주소 입력"
+            android:includeFontPadding="false"
+            android:inputType="text"
+            android:maxLines="30"
+            android:paddingLeft="@dimen/small"
+            android:paddingRight="@dimen/small"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <Button
+            android:id="@+id/maps_search_button"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/button_default"
+            android:fontFamily="@font/noto_sans_medium"
+            android:includeFontPadding="false"
+            android:text="검색" />
+
+    </LinearLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/medium"
+        android:paddingLeft="@dimen/large"
+        android:paddingRight="@dimen/large"
+        tools:context=".ui.activity.MapsActivity" />
+
+</LinearLayout>

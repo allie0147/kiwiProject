@@ -1,0 +1,58 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardSiteCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/large"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginRight="@dimen/large"
+    android:layout_marginBottom="@dimen/small"
+    card_view:cardCornerRadius="10dp"
+    card_view:cardElevation="15dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/medium">
+
+        <View
+            android:id="@+id/home_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="@dimen/medium"
+            android:layout_marginRight="@dimen/medium"
+            android:adjustViewBounds="true"
+            android:background="@color/placeholder_bg"
+            android:padding="@dimen/small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/placeholder_title"
+                android:layout_width="150dp"
+                android:layout_height="@dimen/placeholder_text_height"
+                android:background="@color/placeholder_bg" />
+
+            <View
+                android:id="@+id/placeholder_dong"
+                android:layout_width="60dp"
+                android:layout_height="@dimen/placeholder_text_height"
+                android:layout_marginTop="@dimen/small"
+                android:background="@color/placeholder_bg" />
+
+            <View
+                android:id="@+id/placeholder_price"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/placeholder_text_height"
+                android:layout_marginTop="@dimen/small"
+                android:background="@color/placeholder_bg" />
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

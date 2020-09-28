@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/large"
+    android:layout_marginTop="@dimen/medium"
+    android:layout_marginRight="@dimen/large"
+    android:layout_marginBottom="@dimen/medium">
+    <!-- 채팅 리스트 리사이클러-->
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/chatting_list_profile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        app:civ_border_color="@android:color/black"
+        app:civ_border_width="2dp" />
+
+    <TextView
+        android:id="@+id/chatting_list_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/medium_large"
+        android:layout_marginLeft="@dimen/medium_large"
+        android:layout_toRightOf="@+id/chatting_list_profile"
+        android:fontFamily="@font/noto_sans_medium"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/smfont" />
+
+
+    <TextView
+        android:id="@+id/chatting_list_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chatting_list_username"
+        android:layout_marginStart="@dimen/medium_large"
+        android:layout_marginLeft="@dimen/medium_large"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_toRightOf="@+id/chatting_list_username"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sfont" />
+
+    <TextView
+        android:id="@+id/chatting_list_dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chatting_list_location"
+        android:layout_toEndOf="@+id/chatting_list_location"
+        android:layout_toRightOf="@+id/chatting_list_location"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sfont" />
+
+    <com.github.curioustechizen.ago.RelativeTimeTextView
+        android:id="@+id/chatting_list_wdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chatting_list_username"
+        android:layout_marginStart="@dimen/small"
+        android:layout_marginLeft="@dimen/small"
+        android:layout_toEndOf="@+id/chatting_list_dot"
+        android:layout_toRightOf="@+id/chatting_list_dot"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@color/gray"
+        android:textSize="@dimen/sfont" />
+
+    <TextView
+        android:id="@+id/chatting_list_recent_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/chatting_list_username"
+        android:layout_marginStart="@dimen/medium_large"
+        android:layout_marginLeft="@dimen/medium_large"
+        android:layout_marginTop="@dimen/small_medium"
+        android:layout_marginBottom="@dimen/small_medium"
+        android:layout_toRightOf="@+id/chatting_list_profile"
+        android:ellipsize="end"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:maxLines="1"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/smfont" />
+
+    <!--  <TextView
+          android:id="@+id/badge"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_toEndOf="@+id/recent_message"
+          android:layout_toRightOf="@+id/recent_message"
+          android:text="55"
+          android:textColor="@android:color/black" />-->
+    <View
+        android:id="@+id/chatting_list_divider"
+        style="@style/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/chatting_list_recent_message"
+        android:layout_marginTop="@dimen/medium" />
+</RelativeLayout>

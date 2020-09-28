@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/find_user_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.activity.FindUserActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/noto_sans_medium"
+        android:text="이메일 찾기"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/find_user_find_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="본인의 핸드폰 번호를 입력하세요( ' - ' 제외 )"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/find_user_find_email_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/button_default"
+        android:fontFamily="@font/noto_sans_medium"
+        android:text="이메일 찾기"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/noto_sans_medium"
+        android:text="비밀번호 찾기"
+        android:textColor="@android:color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/find_user_find_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="본인의 핸드폰 번호를 입력하세요( ' - ' 제외 )"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/white"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textColor="@android:color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/find_user_find_password_btn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_default"
+        android:fontFamily="@font/noto_sans_medium"
+        android:text="비밀번호 찾기"
+        android:textColor="@color/white" />
+
+</LinearLayout>

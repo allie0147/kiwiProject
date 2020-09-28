@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/otp_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/large"
+    tools:context=".ui.activity.OtpActivity">
+
+    <TextView
+        android:id="@+id/otp_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="인증번호 6자리를 입력하세요"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mfont" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/otp_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="인증 번호"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="number"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mfont" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/otp_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/font"
+        android:background="@color/green"
+        android:fontFamily="@font/noto_sans_medium"
+        android:includeFontPadding="false"
+        android:text="확인"
+        android:textSize="@dimen/font" />
+
+    <ProgressBar
+        android:id="@+id/otp_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="200dp"
+        android:visibility="invisible" />
+
+</LinearLayout>

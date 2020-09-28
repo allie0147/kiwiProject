@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/large"
+    android:paddingRight="@dimen/large">
+
+    <TextView
+        android:id="@+id/body_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/noto_sans_bold"
+        android:includeFontPadding="false"
+        android:paddingTop="@dimen/medium"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mfont" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/small"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/body_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="·"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sfont" />
+
+        <com.github.curioustechizen.ago.RelativeTimeTextView
+            android:id="@+id/body_wdate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/sfont" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/body_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_large"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/font" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/medium_large"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="채팅 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:id="@+id/body_chat_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="개"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="·"
+            android:textColor="@color/gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="관심 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:id="@+id/body_heart_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="0"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:text="·"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="조회 "
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+
+        <TextView
+            android:id="@+id/body_visit_cnt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:includeFontPadding="false"
+            android:text="1"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/smfont" />
+    </LinearLayout>
+</LinearLayout>

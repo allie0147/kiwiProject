@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SettingsFragment">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/settings_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        android:includeFontPadding="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/settings_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/settings_menu">
+
+            <TextView
+                android:id="@+id/settings_username"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/xlarge"
+                android:layout_marginLeft="@dimen/xlarge"
+                android:fontFamily="@font/noto_sans_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="나의 키위"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/appbar" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View
+        android:id="@id/settings_divider"
+        style="@style/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:layout_below="@+id/settings_appbar" />
+
+    <RelativeLayout
+        android:id="@+id/settings_profile_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_divider"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="@drawable/ripple_unbounded">
+
+        <include
+            android:id="@+id/settings_profile"
+            layout="@layout/include_post_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/settings_profile_button"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/large"
+            android:layout_marginRight="@dimen/large"
+            android:background="@drawable/edittext_light"
+            android:foreground="@drawable/ripple_unbounded"
+            android:gravity="center"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:text="프로필 수정하기"
+            tools:targetApi="m" />
+
+        <View
+            style="@style/divider"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignBottom="@+id/settings_profile" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/settings_map"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/settings_profile_container"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="@dimen/large"
+            android:layout_marginLeft="@dimen/large"
+            android:src="@drawable/ic_baseline_my_location_24" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/small_medium"
+            android:layout_marginTop="@dimen/medium"
+            android:layout_marginBottom="@dimen/medium"
+            android:fontFamily="@font/noto_sans_regular"
+            android:text="동네 인증하기"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/font" />
+    </LinearLayout>
+</RelativeLayout>

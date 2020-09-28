@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.PostDetailActivity">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/detail_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:id="@+id/detail_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/detail_view_pager_conatiner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:background="@drawable/scrim_topdown" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/detail_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="400dp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_alignBottom="@id/detail_view_pager"
+                    android:background="@drawable/scrim" />
+
+                <com.rd.PageIndicatorView
+                    android:id="@+id/page_indicator_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/detail_view_pager"
+                    android:layout_centerInParent="true"
+                    android:layout_marginBottom="@dimen/medium"
+                    android:background="@android:color/transparent"
+                    android:labelFor="@+id/detail_view_pager"
+                    app:piv_animationType="worm"
+                    app:piv_dynamicCount="true"
+                    app:piv_radius="@dimen/small"
+                    app:piv_selectedColor="@color/green"
+                    app:piv_unselectedColor="@color/white_o"
+                    app:piv_viewPager="@id/detail_view_pager" />
+            </RelativeLayout>
+
+            <com.google.android.material.appbar.AppBarLayout
+                android:id="@+id/detail_appbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/appbar_height"
+                android:background="@android:color/transparent">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/detail_pin_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:contentScrim="@android:color/transparent"
+                    app:menu="@menu/post_detail_menu"
+                    app:navigationIcon="@drawable/round_keyboard_backspace_white_24"
+                    app:titleTextAppearance="@font/noto_sans_bold"
+                    app:titleTextColor="@android:color/black">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/detail_dynamic_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="start"
+                            android:fontFamily="@font/noto_sans_bold"
+                            android:gravity="bottom"
+                            android:includeFontPadding="false"
+                            android:text="제목"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/appbar"
+                            android:visibility="gone" />
+                    </LinearLayout>
+                </androidx.appcompat.widget.Toolbar>
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <LinearLayout
+                android:id="@+id/detail_scroll_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_view_pager_conatiner"
+                android:layout_marginTop="-2dp"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/detail_post_author"
+                    layout="@layout/include_post_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <include
+                    android:id="@+id/detail_post_body"
+                    layout="@layout/include_post_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/xlarge" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/xlarge"
+                    android:src="@drawable/kiwi_64" />
+            </LinearLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:id="@+id/detail_footer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/navbar_height"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bottom"
+        android:gravity="end|center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/detail_post_go_chat"
+            android:layout_width="150dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="@dimen/medium_large"
+            android:layout_marginRight="@dimen/medium_large"
+            android:background="@drawable/button_background"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/noto_sans_medium"
+            android:includeFontPadding="false"
+            android:paddingLeft="@dimen/small_medium"
+            android:paddingTop="@dimen/small"
+            android:paddingRight="@dimen/small_medium"
+            android:paddingBottom="@dimen/small"
+            android:text="채팅으로 거래하기"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/font" />
+        <!--<ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/round_favorite_border_white_36" />-->
+
+    </LinearLayout>
+</RelativeLayout>

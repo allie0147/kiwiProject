@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_fragment_chat_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.ChatListFragment">
+    <!-- 채팅 리스트 -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_scrollFlags="scroll|enterAlways">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/chat_list_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="@dimen/xlarge"
+                android:layout_marginLeft="@dimen/xlarge"
+                android:fontFamily="@font/noto_sans_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:text="채팅"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/appbar" />
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View style="@style/divider" />
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/chat_list_shimmer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider"
+        app:shimmer_auto_start="true"
+        app:shimmer_direction="top_to_bottom"
+        app:shimmer_duration="800"
+        app:shimmer_shape="linear">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+
+            <include layout="@layout/chat_placeholder_item" />
+        </LinearLayout>
+    </com.facebook.shimmer.ShimmerFrameLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/chatting_list_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:listitem="@layout/chatting_list" />
+
+</LinearLayout>

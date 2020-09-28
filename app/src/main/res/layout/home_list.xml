@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cardSiteCardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/large"
+    android:layout_marginTop="@dimen/small"
+    android:layout_marginRight="@dimen/large"
+    android:layout_marginBottom="@dimen/small">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/medium">
+
+        <ImageView
+            android:id="@+id/home_image"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_marginEnd="@dimen/medium"
+            android:layout_marginRight="@dimen/medium"
+            android:padding="@dimen/small" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/home_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/noto_sans_regular"
+                android:includeFontPadding="false"
+                android:maxLines="1"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_dong"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ssfont" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="ㆍ"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ssfont"
+                    android:textStyle="bold" />
+
+                <com.github.curioustechizen.ago.RelativeTimeTextView
+                    android:id="@+id/home_wdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/ssfont" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/home_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:includeFontPadding="false"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_bold"
+                    android:includeFontPadding="false"
+                    android:text="원"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

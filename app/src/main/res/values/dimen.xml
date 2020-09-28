@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="appbar_height">60dp</dimen>
+    <dimen name="navbar_height">50dp</dimen>
+    <dimen name="small">5dp</dimen>
+    <dimen name="small_medium">8dp</dimen>
+    <dimen name="medium">10dp</dimen>
+    <dimen name="medium_large">15dp</dimen>
+    <dimen name="large">20dp</dimen>
+    <dimen name="xlarge">30dp</dimen>
+    <dimen name="mfont">19sp</dimen>
+    <dimen name="appbar">17sp</dimen>
+    <dimen name="font">15sp</dimen>
+    <dimen name="smfont">13sp</dimen>
+    <dimen name="sfont">11sp</dimen>
+    <dimen name="ssfont">10sp</dimen>
+    <dimen name="placeholder_text_height">15dp</dimen>
+</resources>

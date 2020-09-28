@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/phone_auth_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/large"
+    tools:context=".ui.activity.PhoneAuthActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/kiwi_64" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/large"
+        android:fontFamily="@font/noto_sans_medium"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:text="핸드폰을 인증하세요"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/mfont" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/phone_auth_input_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="핸드폰 번호를 입력하세요( ' - ' 제외 )"
+        app:errorEnabled="true"
+        app:errorTextColor="@color/red"
+        app:hintAnimationEnabled="true"
+        app:hintEnabled="true">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/noto_sans_regular"
+            android:gravity="center"
+            android:includeFontPadding="false"
+            android:inputType="phone"
+            android:padding="@dimen/small"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/mfont" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/phone_auth_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:background="@color/green"
+        android:fontFamily="@font/noto_sans_medium"
+        android:includeFontPadding="false"
+        android:text="확인"
+        android:textSize="@dimen/font" />
+
+    <ProgressBar
+        android:id="@+id/phone_auth_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible" />
+</LinearLayout>

@@ -1,0 +1,41 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/chat_item_right"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/medium"
+    android:paddingTop="@dimen/small"
+    android:paddingRight="@dimen/medium">
+
+    <TextView
+        android:id="@+id/chat_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/chat_bubble_right"
+        android:fontFamily="@font/noto_sans_regular"
+        android:maxWidth="250dp"
+        android:paddingLeft="@dimen/medium"
+        android:paddingTop="@dimen/small"
+        android:paddingRight="@dimen/medium"
+        android:paddingBottom="@dimen/small"
+        android:text="MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE.MESSAGE"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/sfont" />
+
+    <TextView
+        android:id="@+id/chat_wdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/chat_message"
+        android:layout_marginEnd="@dimen/small_medium"
+        android:layout_marginRight="@dimen/small_medium"
+        android:layout_toStartOf="@+id/chat_message"
+        android:layout_toLeftOf="@+id/chat_message"
+        android:fontFamily="@font/noto_sans_regular"
+        android:includeFontPadding="false"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="@dimen/ssfont" />
+
+</RelativeLayout>
+

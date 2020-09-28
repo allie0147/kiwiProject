@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/post_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.activity.PostActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar_post"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appbar_height">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/post_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/write_close"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:gravity="start"
+                    android:includeFontPadding="false"
+                    android:text="닫기"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/appbar" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/appbar_height"
+                    android:layout_marginRight="@dimen/small_medium"
+                    android:layout_weight="2"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:paddingBottom="@dimen/medium"
+                    android:text="중고거래 글쓰기"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/appbar" />
+
+                <TextView
+                    android:id="@+id/post_submit"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:gravity="end"
+                    android:includeFontPadding="false"
+                    android:paddingEnd="@dimen/large"
+                    android:paddingRight="@dimen/large"
+                    android:text="완료"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/appbar" />
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <View style="@style/divider" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/large"
+            android:paddingRight="@dimen/large">
+
+            <HorizontalScrollView
+                android:id="@+id/post_horizontal_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fadeScrollbars="true"
+                android:fadingEdge="horizontal"
+                android:paddingTop="@dimen/medium_large"
+                android:paddingBottom="@dimen/medium_large">
+
+                <LinearLayout
+                    android:id="@+id/post_image_scroll"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/post_photo"
+                        android:layout_width="80dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/button_background"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:fontFamily="@font/noto_sans_medium"
+                        android:gravity="center"
+                        android:includeFontPadding="false"
+                        android:text="사진 등록\n0/5"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/smfont" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <View style="@style/divider" />
+
+            <EditText
+                android:id="@+id/post_title"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginBottom="@dimen/small"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/noto_sans_regular"
+                android:hint="글 제목"
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="text"
+                android:maxLength="30"
+                android:maxLines="1"
+                android:paddingTop="@dimen/medium_large"
+                android:paddingBottom="@dimen/medium_large"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/font" />
+
+            <View style="@style/divider" />
+
+            <TextView
+                android:id="@+id/post_category"
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginBottom="@dimen/small"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/noto_sans_medium"
+                android:gravity="center_vertical"
+                android:includeFontPadding="false"
+                android:paddingTop="@dimen/medium_large"
+                android:paddingBottom="@dimen/medium_large"
+                android:text="카테고리 선택"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/font" />
+
+            <View style="@style/divider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginBottom="@dimen/small"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingTop="@dimen/medium_large"
+                android:paddingBottom="@dimen/medium_large">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/noto_sans_medium"
+                    android:includeFontPadding="false"
+                    android:text="￦"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/font" />
+
+                <EditText
+                    android:id="@+id/post_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/small"
+                    android:layout_marginLeft="@dimen/small"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/noto_sans_regular"
+                    android:hint="가격 입력"
+                    android:importantForAutofill="no"
+                    android:includeFontPadding="false"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColor="@android:color/black"
+                    android:textColorHint="@android:color/darker_gray"
+                    android:textSize="@dimen/font" />
+            </LinearLayout>
+
+            <View style="@style/divider" />
+
+            <EditText
+                android:id="@+id/post_content"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:layout_marginTop="@dimen/small"
+                android:layout_marginBottom="@dimen/small"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/noto_sans_regular"
+                android:gravity="start"
+                android:hint="게시글 내용을 작성해주세요."
+                android:importantForAutofill="no"
+                android:includeFontPadding="false"
+                android:inputType="textMultiLine"
+                android:lines="10"
+                android:maxLength="200"
+                android:maxLines="20"
+                android:paddingLeft="@dimen/small"
+                android:paddingTop="@dimen/medium_large"
+                android:paddingRight="@dimen/small"
+                android:paddingBottom="@dimen/medium_large"
+                android:textColor="@android:color/black"
+                android:textColorHint="@android:color/darker_gray"
+                android:textSize="@dimen/font" />
+
+            <View style="@style/divider" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

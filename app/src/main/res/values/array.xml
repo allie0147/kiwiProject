@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category">
+        <item>디지털/가전</item>
+        <item>가구/인테리어</item>
+        <item>의류/패션/잡화</item>
+        <item>뷰티/미용</item>
+        <item>유아동/유아도서</item>
+        <item>기타 중고물품</item>
+    </string-array>
+</resources>
