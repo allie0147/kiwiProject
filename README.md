@@ -5,7 +5,7 @@
 
 <img src="https://user-images.githubusercontent.com/62925639/95828740-4defee00-0d70-11eb-80cf-ec0e24c80e14.jpg" alt="kiwiMarket" width="15%" height="15%" />
 
-## 설치 방법
+## 설치하기 전에..
 - Firebase에 Android Project 등록
 - **Authentication** 탭에서 Sign-in Method **Email/Password,Phone,Google** 활성화
 - **Google Maps Android API key** 발급    
