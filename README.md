@@ -1,6 +1,6 @@
 # Kiwi Market
-중고거래 어플리케이션 "당근마켓" 클론코딩
 > 2020/08/21 ~ 2020/09/27   
+> 중고거래 어플리케이션 "당근마켓" 클론코딩.  
 위치(동네) 기반 중고 거래 서비스 및 1:1 채팅 시스템 구현   
 
 <img src="https://user-images.githubusercontent.com/62925639/95828740-4defee00-0d70-11eb-80cf-ec0e24c80e14.jpg" alt="kiwiMarket" width="15%" height="15%" />
